@@ -1,10 +1,10 @@
 class Hero {
-    constructor(x, y) {
+    constructor(x, y, width, height) {
 
         this.body = Bodies.rectangle(x, y, width, height);
         this.width = width;
         this.height = height;
-        this.image = loadImage("hero.png");
+        this.image = loadImage("Hero.png");
 
         World.add(world, this.body);
     }

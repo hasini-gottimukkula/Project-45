@@ -14,7 +14,7 @@ function setup() {
   createCanvas(1200, 800);
 
   engine = Engine.create();
-  world = Engine.world;
+  world = engine.world;
 
   hero = new Hero(1052, 548, 70, 50);
   ground = new Ground(9, 772, 30, 20);
@@ -25,5 +25,11 @@ function setup() {
 function draw() {
   background("black");
   text("(" + mouseX + ", " + mouseY + ")", mouseX, mouseY);
+
+  hero.display();
+  ground.display();
+  jewel.display();
+  building.display();
+
   drawSprites();
 }
